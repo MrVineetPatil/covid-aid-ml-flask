@@ -1,6 +1,6 @@
 import os
 import numpy as np
-import pickle
+import pickle5 as pickle
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
