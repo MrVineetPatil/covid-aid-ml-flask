@@ -21,7 +21,7 @@ def index():
                                           data['Fever'],
                                           data['Male'],
                                           data['Age']])])
-    if prediction[0]<0.20:
+    if prediction[0]<0.25:
         output =float(prediction[0])*100
     else:
         output =float(prediction[0])*300
