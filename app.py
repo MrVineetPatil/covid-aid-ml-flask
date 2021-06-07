@@ -25,6 +25,6 @@ def index():
         output =float(prediction[0])*100
     else:
         output =float(prediction[0])*300
-    return jsonify(f"The probability of being COVID +VE is {round(output)} %")
+    return jsonify({"result":f"The probability of being COVID +VE is {round(output)} %"})
 
 
