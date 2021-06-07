@@ -20,7 +20,7 @@ def index():
                                           request.args.get('Cough'),
                                           request.args.get('Fever'),
                                           request.args.get('Male'),
-                                          request.args.get('Age 60+')])])
+                                          request.args.get('Age')])])
     if prediction[0]<0.20:
         output =float(prediction[0])*100
     else:
