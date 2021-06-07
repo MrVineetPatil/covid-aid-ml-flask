@@ -21,7 +21,10 @@ def index():
                                           data['Fever'],
                                           data['Male'],
                                           data['Age 60+']])])
-    output =float(prediction[0])*300
+    if prediction[0]<0.20:
+        output =float(prediction[0])*100
+    else:
+        output =float(prediction[0])*300
     return f"The probability of being COVID +VE is {output}."
 
 
