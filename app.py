@@ -11,16 +11,16 @@ app.config.from_object(env_config)
 
 @app.route('/', methods=['POST'])
 def index():
-    #data = request.args.get(force=True)
+    data = request.get_json(force=True)
     secret_key = app.config.get("SECRET_KEY")
-    prediction = model.predict([np.array([request.args.get('Contact with confirmed'),
-                                          request.args.get('Headache'),
-                                          request.args.get('Sore throat'),
-                                          request.args.get('Shortness of breath'),
-                                          request.args.get('Cough'),
-                                          request.args.get('Fever'),
-                                          request.args.get('Male'),
-                                          request.args.get('Age')])])
+    prediction = model.predict([np.array([data['Contact with confirmed'],
+                                          data['Headache'],
+                                          data['Sore throat'],
+                                          data['Shortness of breath'],
+                                          data['Cough'],
+                                          data['Fever'],
+                                          data['Male'],
+                                          data['Age']])])
     if prediction[0]<0.20:
         output =float(prediction[0])*100
     else:
