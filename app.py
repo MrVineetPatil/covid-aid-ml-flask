@@ -21,7 +21,7 @@ def index():
                                           data['Fever'],
                                           data['Male'],
                                           data['Age 60+']])])
-    #output = prediction[0]
-    return f"The configured secret key is {prediction}."
+    output =float(prediction[0])*300
+    return f"The probability of being COVID +VE is {output}."
 
 
