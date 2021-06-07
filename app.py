@@ -11,7 +11,7 @@ app.config.from_object(env_config)
 
 @app.route('/', methods=['POST'])
 def index():
-    data = request.get_json(force=True)
+    data = request.args.get(force=True)
     secret_key = app.config.get("SECRET_KEY")
     prediction = model.predict([np.array([data['Contact with confirmed'],
                                           data['Headache'],
