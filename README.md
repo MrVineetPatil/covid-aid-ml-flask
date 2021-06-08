@@ -1,1 +1,1 @@
-Source files supporting the [Deploying a Python Flask Example Application Using Heroku](https://realpython.com/flask-by-example-part-1-project-setup/) article on [Real Python](https://realpython.com/).
+Deploying a Python Flask COVID-AID Application Using Heroku.
